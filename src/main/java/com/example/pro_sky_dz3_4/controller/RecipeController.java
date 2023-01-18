@@ -1,7 +1,7 @@
 package com.example.pro_sky_dz3_4.controller;
 
 import com.example.pro_sky_dz3_4.model.Recipe;
-import com.example.pro_sky_dz3_4.service.impl.RecipeServiceImpl;
+import com.example.pro_sky_dz3_4.service.RecipeService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 public class RecipeController {
 
-    private final RecipeServiceImpl recipeService;
+    private final RecipeService recipeService;
 
-    public RecipeController(RecipeServiceImpl recipeService) {
+    public RecipeController(RecipeService recipeService) {
         this.recipeService = recipeService;
     }
 

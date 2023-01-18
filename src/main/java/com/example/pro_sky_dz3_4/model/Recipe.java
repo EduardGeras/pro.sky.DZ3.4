@@ -12,8 +12,8 @@ public class Recipe {
 
     private String name;
 
-    private String ingredients;
+    private String listOfIngredients;
 
-    private String cookingSteps;
+    private String listOfSteps;
 
 }

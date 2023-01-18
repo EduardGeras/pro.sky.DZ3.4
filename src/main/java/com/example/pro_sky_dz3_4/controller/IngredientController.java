@@ -1,7 +1,7 @@
 package com.example.pro_sky_dz3_4.controller;
 
 import com.example.pro_sky_dz3_4.model.Ingredient;
-import com.example.pro_sky_dz3_4.service.impl.IngredientServiceImpl;
+import com.example.pro_sky_dz3_4.service.IngredientService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 public class IngredientController {
 
-    private final IngredientServiceImpl ingredientService;
+    private final IngredientService ingredientService;
 
-    public IngredientController(IngredientServiceImpl ingredientService) {
+    public IngredientController(IngredientService ingredientService) {
         this.ingredientService = ingredientService;
     }
 
