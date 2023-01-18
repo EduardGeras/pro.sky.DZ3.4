@@ -21,7 +21,7 @@ public class IngredientController {
         return ingredientService.addIngredient(ingredient);
     }
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public ResponseEntity<Ingredient> getIngredientInfo(@PathVariable Long id) {
         Ingredient ingredient = ingredientService.findIngredient(id);
         if (ingredient == null) {

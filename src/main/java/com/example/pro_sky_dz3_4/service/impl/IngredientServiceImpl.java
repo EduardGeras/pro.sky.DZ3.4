@@ -1,7 +1,6 @@
 package com.example.pro_sky_dz3_4.service.impl;
 
 import com.example.pro_sky_dz3_4.model.Ingredient;
-import com.example.pro_sky_dz3_4.model.Recipe;
 import com.example.pro_sky_dz3_4.service.IngredientService;
 import org.springframework.stereotype.Service;
 

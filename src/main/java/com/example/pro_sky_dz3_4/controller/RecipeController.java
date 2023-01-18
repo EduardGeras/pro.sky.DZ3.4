@@ -1,6 +1,5 @@
 package com.example.pro_sky_dz3_4.controller;
 
-import com.example.pro_sky_dz3_4.model.Ingredient;
 import com.example.pro_sky_dz3_4.model.Recipe;
 import com.example.pro_sky_dz3_4.service.impl.RecipeServiceImpl;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +21,7 @@ public class RecipeController {
         return recipeService.addRepice(recipe);
     }
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public ResponseEntity<Recipe> getRecipeInfo(@PathVariable Long id) {
         Recipe recipe = recipeService.findRepice(id);
         if (recipe == null) {
