@@ -18,16 +18,31 @@ public class RecipeController {
 
     @PostMapping
     public Recipe createRecipe(@RequestBody Recipe recipe) {
-        return recipeService.addRepice(recipe);
+        return recipeService.addRecice(recipe);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Recipe> getRecipeInfo(@PathVariable Long id) {
-        Recipe recipe = recipeService.findRepice(id);
+        Recipe recipe = recipeService.findRecice(id);
         if (recipe == null) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(recipe);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Recipe> editRecipe(@PathVariable Long id,
+                                             @RequestBody Recipe recipe) {
+        Recipe foundRecipe = recipeService.editRecice(id, recipe);
+        if (foundRecipe == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(foundRecipe);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRecipe(@PathVariable Long id) {
+        recipeService.removeRecice(id);
+        return ResponseEntity.ok().build();
+    }
 }

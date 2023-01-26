@@ -4,7 +4,11 @@ import com.example.pro_sky_dz3_4.model.Recipe;
 
 public interface RecipeService {
 
-    Recipe addRepice(Recipe recipe);
+    Recipe addRecice(Recipe recipe);
 
-    Recipe findRepice(Long id);
+    Recipe findRecice(Long id);
+
+    Recipe editRecice(Long id, Recipe recipe);
+
+    Recipe removeRecice(Long id);
 }

@@ -15,14 +15,29 @@ public class RecipeServiceImpl implements RecipeService {
     private long count = 0;
 
     @Override
-    public Recipe addRepice(Recipe recipe) {
+    public Recipe addRecice(Recipe recipe) {
         recipe.setId(count++);
         recipes.put(recipe.getId(), recipe);
         return recipe;
     }
 
     @Override
-    public Recipe findRepice(Long id) {
+    public Recipe findRecice(Long id) {
         return recipes.get(id);
     }
+
+    @Override
+    public Recipe editRecice(Long id, Recipe recipe) {
+        if (!recipes.containsKey(id)) {
+            return null;
+        }
+        recipes.put(id, recipe);
+        return recipe;
+    }
+
+    @Override
+    public Recipe removeRecice(Long id) {
+        return recipes.remove(id);
+    }
+
 }

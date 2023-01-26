@@ -25,4 +25,18 @@ public class IngredientServiceImpl implements IngredientService {
     public Ingredient findIngredient(Long id) {
         return ingredients.get(id);
     }
+
+    @Override
+    public Ingredient editIngredient(Long id, Ingredient ingredient) {
+        if (!ingredients.containsKey(id)) {
+            return null;
+        }
+        ingredients.put(id, ingredient);
+        return ingredient;
+    }
+
+    @Override
+    public Ingredient removeIngredient(Long id) {
+        return ingredients.remove(id);
+    }
 }

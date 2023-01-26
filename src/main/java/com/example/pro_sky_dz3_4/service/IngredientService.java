@@ -7,4 +7,8 @@ public interface IngredientService {
     Ingredient addIngredient(Ingredient ingredient);
 
     Ingredient findIngredient(Long id);
+
+    Ingredient editIngredient(Long id, Ingredient ingredient);
+
+    Ingredient removeIngredient(Long id);
 }
